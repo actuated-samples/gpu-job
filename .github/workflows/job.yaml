@@ -20,3 +20,4 @@ jobs:
         - name: Run nvidia-smi
           run: |
             nvidia-smi
+
