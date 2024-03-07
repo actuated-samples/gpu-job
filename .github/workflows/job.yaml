@@ -16,7 +16,7 @@ jobs:
         runs-on: [actuated-8cpu-16gb, ae]
         steps:
         - uses: actions/checkout@v1
-        - name: self-actuated/nvidia-run@master
+        - uses: self-actuated/nvidia-run@master
         - name: Run nvidia-smi
           run: |
             nvidia-smi
