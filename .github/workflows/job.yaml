@@ -1,0 +1,22 @@
+name: gpu-job
+
+on:
+    pull_request:
+        branches:
+        - '*'
+    push:
+        branches:
+        - master
+        - main
+    workflow_dispatch:
+
+jobs:
+    gpu-job:
+        name: gpu-job
+        runs-on: [actuated-8cpu-16gb, ae]
+        steps:
+        - uses: actions/checkout@v1
+        - name: self-actuated/nvidia-run@master
+        - name: Run nvidia-smi
+          run: |
+            nvidia-smi
