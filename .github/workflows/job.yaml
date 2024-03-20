@@ -13,11 +13,11 @@ on:
 jobs:
     gpu-job:
         name: gpu-job
-        runs-on: [actuated-8cpu-16gb, ae]
+        runs-on: [actuated-8cpu-16gb, openmetal]
         steps:
         - uses: actions/checkout@v1
         - uses: self-actuated/nvidia-run@master
         - name: Run nvidia-smi
           run: |
+            nvidia-smi -L
             nvidia-smi
-
