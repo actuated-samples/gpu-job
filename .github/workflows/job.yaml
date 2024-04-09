@@ -21,3 +21,4 @@ jobs:
           run: |
             nvidia-smi -L
             nvidia-smi
+
