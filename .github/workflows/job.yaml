@@ -16,6 +16,8 @@ jobs:
         runs-on: [actuated-8cpu-16gb, openmetal]
         steps:
         - uses: actions/checkout@v1
+        - run: |
+            lspci -kk -nn
         - uses: self-actuated/nvidia-run@master
         - name: Run nvidia-smi
           run: |
